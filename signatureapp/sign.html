@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signature</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <div class="container absolute top-12 left-12 font-mono">
+      <div class="container flex justify-center space-x-20">
+        <div
+          class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" id="colorPicker"
+        >
+          <p>Text Colour Picker</p>
+          <input class="form-control" type="color" id="colorPicker" />
+        </div>
+        <div
+          class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" id="canvasColor"
+        >
+          <p>Background</p>
+          <input class="form-control" type="color" id="canvasColor" />
+        </div>
+        <div
+          class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        >
+          <p>Font size</p>
+          <select
+            id="fontSize"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option selected>Select size</option>
+            <option value="5">5px</option>
+            <option value="10">10px</option>
+            <option value="20">20px</option>
+            <option value="30">30px</option>
+            <option value="40">40px</option>
+            <option value="50">50px</option>
+          </select>
+        </div>
+      </div>
+      <div class="container flex justify-center my-7">
+        <canvas
+          class="border border-solid border-2 align-middle"
+          id="myCanvas"
+          width="800"
+          height="500"
+        ></canvas>
+      </div>
+      <div class="bottomitems flex justify-center space-x-20 mx-5 my-4">
+        <button
+          type="button"
+          class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          id="savebutton"
+        >
+          Save and Downlaod
+        </button>
+        <button
+          type="button"
+          class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          id="Retreivebutton"
+        >
+          Retreive last sign
+        </button>
+        <button
+          type="button"
+          class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          id="Deletebutton"
+        >
+          Clear All
+        </button>
+      </div>
+    </div>
+    <script src="sign.js"></script>
+  </body>
+</html>
